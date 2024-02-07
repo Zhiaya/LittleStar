@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: pink;
+
+  & header {
+    text-align: center;
+    font-size: 7rem;
+    color: aliceblue;
+    /* display: grid; */
+    background-color: darkcyan;
+  }
+   & .s123 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  & .s456 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  } 
+
+  & nav {
+    text-align: center;
+    font-size: 2.5rem;
+    background-color: palevioletred;
+    & a {
+      color: aliceblue;
+      text-decoration: none;
+    }
+  }
+
+  & main {
+    & .Triangle {
+      place-content: center;
+    }
+
+    & .lr {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    & .Triangle:nth-child(1) {
+      /* display: grid;
+      grid-template-columns: 2, 1fr;
+      grid-template-rows: 2, 1fr; */
+      /* Top Arrow */
+      
+      & .top {
+        place-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: rgb(123, 200, 132);
+        & .arrow-top-left {
+            background-color: aliceblue;
+          position: relative;
+          width: 0;
+          height: 0;
+          border-left: 50px solid transparent;
+          border-right: 0px solid transparent;
+          border-bottom: 200px solid navy;
+        }
+        & .arrow-left-left {
+          width: 0;
+          height: 0;
+          border-left: 200px solid transparent;
+          border-right: 0px solid transparent;
+          border-bottom: 50px solid yellow;
+        }
+        & .arrow-top-right {
+          width: 0;
+          height: 0;
+          border-left: 0px solid transparent;
+          border-right: 50px solid transparent;
+          border-bottom: 200px solid rgb(128, 81, 0);
+        }
+      }
+
+      /* Down Arrow */
+      & .down {
+        place-content: center;
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: rgb(124, 145, 158);
+        /* position: absolute; */
+        & .arrow-down-left {
+            background-color: black;
+          width: 0;
+          height: 0;
+          border-left: 50px solid transparent;
+          border-right: 0px solid transparent;
+          border-top: 200px solid green;
+        }
+
+        & .arrow-down-right {
+          width: 0;
+          height: 0;
+          border-left: 0px solid transparent;
+          border-right: 50px solid transparent;
+          border-top: 200px solid tomato;
+        }
+      }
+
+      /* Left Arrow */
+      & .left {
+        margin-left: auto;
+        /* display: flex;
+        flex-wrap: nowrap; */
+        background-color: rgb(191, 67, 110);
+        /* & .arrow-left-left {
+          width: 0;
+          height: 0;
+          border-left: 200px solid transparent;
+          border-right: 0px solid transparent;
+          border-bottom: 50px solid yellow;
+        } */
+
+        & .arrow-left-right {
+          width: 0;
+          height: 0;
+          border-left: 200px solid transparent;
+          border-right: 0px solid transparent;
+          border-top: 50px solid skyblue;
+        }
+      }
+
+      /* Right Arrow */
+      & .right {
+        
+        background-color: rgb(196, 214, 114);
+        
+        & .arrow-right-left {
+          width: 0;
+          height: 0;
+          border-left: 0px solid transparent;
+          border-right: 200px solid transparent;
+          border-bottom: 50px solid rebeccapurple;
+        }
+
+        & .arrow-right-right {
+          width: 0;
+          height: 0;
+          border-left: 0px solid transparent;
+          border-right: 200px solid transparent;
+          border-top: 50px solid gray;
+        }
+      }
+    }
+  }
+}
